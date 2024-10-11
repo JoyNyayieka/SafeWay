@@ -8,7 +8,7 @@ def preprocess_crime_data(data_path):
 
     # Normalize crime severity
     scaler = MinMaxScaler()
-    dataset['normalized_severity'] = scaler.fit_transform(dataset[['severity']])
+    dataset['normalized_severity'] = scaler.fit_transform(dataset[['Severity']])
 
     # Return the processed dataset
     return dataset
