@@ -18,7 +18,7 @@ crime_data = crime_data.to_dict(orient='records') #Convert DataFrame to a list o
 
 # Assign crime severity and traffic data
 graph = assign_crime_severity(graph, crime_data)
-graph = assign_traffic_data(graph, api_key='AIzaSyCoiL4v0Ttc00htURtPZB9JhEGOqpaLavU')
+graph = assign_traffic_data(graph, api_key='replace this with API key')
 
 # Define the home route for the web application
 @app.route('/')
