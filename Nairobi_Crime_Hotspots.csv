@@ -1,4 +1,4 @@
-Crime Type ,Severity,Latitude,Longitude,"Latitude, Longitude"
+Crime,Severity,Latitude,Longitude,"Latitude, Longitude"
 "murder, mugging",14,-1.283333,36.816667,"-1.283333, 36.816667"
 "murder, mugging",14,-1.283333,36.816667,"-1.283333, 36.816667"
 "drug trafficing, rape, mugging",13,-1.283333,36.816667,"-1.283333, 36.816667"
