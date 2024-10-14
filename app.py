@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import osmnx as ox
 from routing import find_optimal_route
 from crime_data import assign_crime_severity
-from traffic import assign_traffic_data
+#from traffic import assign_traffic_data
 from visualize import visualize_route
 from data_processing import preprocess_crime_data
 
@@ -18,7 +18,7 @@ crime_data = crime_data.to_dict(orient='records') #Convert DataFrame to a list o
 
 # Assign crime severity and traffic data
 graph = assign_crime_severity(graph, crime_data)
-graph = assign_traffic_data(graph, api_key='replace this with API key')
+#graph = assign_traffic_data(graph, api_key='replace this with API key')
 
 # Define the home route for the web application
 @app.route('/')

@@ -7,7 +7,7 @@ from traffic import assign_traffic_data
 def weight_function(u, v, d):
     distance = d.get('length', 1)  # Road segment length
     severity = d.get('crime_severity', 0)  # Crime severity
-    traffic = d.get('traffic_factor', 1)  # Travel time from Google Maps
+    #traffic = d.get('traffic_factor', 1)  # Travel time from Google Maps
     return distance + (severity * 0.5) + (traffic * 0.3)
 
 # Main function to find optimal route
