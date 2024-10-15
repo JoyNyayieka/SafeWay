@@ -18,7 +18,6 @@ def haversine(coord1, coord2):
 def calculate_severity(midpoint, crime_data, max_distance_km=1):
     total_severity = 0
     for crime in crime_data:
-        print(crime)  # Add this to see what the 'crime' variable contains
         crime_coord = (crime['Latitude'], crime['Longitude'])
         distance = haversine(midpoint, crime_coord)
         

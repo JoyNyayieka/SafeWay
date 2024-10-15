@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import osmnx as ox
 from routing import find_optimal_route
 from crime_data import assign_crime_severity
@@ -34,10 +34,17 @@ def home():
     optimal_route = find_optimal_route(graph, start_lat, start_lon, end_lat, end_lon)
     print("Optimal Route:", optimal_route)
 
-    # Visualize the route
-    visualize_route(graph, optimal_route)
+    if optimal_route:
+        # Get route coordinates (implement this function in routing.py)
+        route_coords = [(graph.nodes[node]['y'], graph.nodes[node]['x']) for node in optimal_route]
 
-    return "Route calculated and visualization complete. Check the output."
+        # Create and save the map
+        map_filename = visualize_route(route_coords)
+
+        # Render the map in the template
+        return render_template('map.html', map_html=map_filename)
+    else:
+        return 'No route found. Please try again.'
 
 if __name__ == "__main__":
     app.run(debug=True)

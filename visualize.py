@@ -1,13 +1,15 @@
 import folium
+import os
 
-# Function to visualize route on a map
-def visualize_route(graph, route):
-    start = graph.nodes[route[0]]
-    route_map = folium.Map(location=[start['y'], start['x']], zoom_start=12)
+def visualize_route(route_coords):
+    m = folium.Map(location=route_coords[0], zoom_start=13)
+    
+    # Plot the route on the map
+    folium.PolyLine(route_coords, color="blue", weight=2.5, opacity=1).add_to(m)
+    
+    # Save the map as an HTML file
+    map_filename = os.path.join('templates', 'map.html')
+    m.save(map_filename)
+    
+    return map_filename
 
-    for u, v in zip(route[:-1], route[1:]):
-        start_point = (graph.nodes[u]['y'], graph.nodes[u]['x'])
-        end_point = (graph.nodes[v]['y'], graph.nodes[v]['x'])
-        folium.PolyLine([start_point, end_point], color="blue", weight=2.5).add_to(route_map)
-
-    route_map.save('optimal_route_map.html')
