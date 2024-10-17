@@ -24,11 +24,11 @@ def home():
     #graph = assign_crime_severity(graph, crime_data)
     #graph = assign_traffic_data(graph, api_key='replace this with API key')
 
-    # Provide coordinates for start and end points (example coordinates)
-    start_lat = -1.2921  # Example start latitude (Nairobi)
-    start_lon = 36.8219  # Example start longitude (Nairobi)
-    end_lat = -1.3000    # Example end latitude (Nairobi)
-    end_lon = 36.8200    # Example end longitude (Nairobi)
+    # Provide coordinates for start and end points 
+    start_lat = -1.2838  # start latitude 
+    start_lon = 36.8903  # start longitude 
+    end_lat = -1.2832    # end latitude 
+    end_lon = 36.7408    # end longitude 
 
     print("Calculating optimal route...")
     optimal_route = find_optimal_route(graph, start_lat, start_lon, end_lat, end_lon)
