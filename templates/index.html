@@ -4,15 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeWay - Route Safety Finder</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        button {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <h1>Route Safety Finder</h1>
-    <form action="/find_route" method="POST">  <!-- Changed here -->
-        <label for="start_location">Start Location:</label>
-        <input type="text" id="start_location" name="start_location" placeholder="e.g. Nairobi, Kenya" required><br><br>
-        <label for="end_location">End Location:</label>
-        <input type="text" id="end_location" name="end_location" placeholder="e.g. Embakasi, Kenya" required><br><br>
-        <button type="submit">Generate Map</button>
-    </form>
+    <div class="form-container">
+        <h1>Route Safety Finder</h1>
+        <form action="/find_route" method="POST">  <!-- Changed here -->
+            <div class="form-group">
+                <label for="start_location">Start Location:</label>
+                <input type="text" class="form-control" id="start_location" name="start_location" placeholder="e.g. Mathare, Nairobi" required>
+            </div>
+            <div class="form-group">
+                <label for="end_location">End Location:</label>
+                <input type="text" class="form-control" id="end_location" name="end_location" placeholder="e.g. Embakasi, Nairobi" required>
+            </div>
+            <button type="submit" class="btn btn-success">Generate Map</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS (Optional, for responsiveness) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
