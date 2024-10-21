@@ -17,6 +17,7 @@ SafeWay is a web-based application designed to assist e-hailing drivers by optim
 ├── visualize.py           # Functions to visualize the route on a map
 
 ├── templates/
+
 │   └── map.html           # HTML template for displaying the map
 
 ├── requirements.txt       # Required Python libraries
