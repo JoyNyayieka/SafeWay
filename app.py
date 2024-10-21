@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 # Function to geocode location using OpenWeather's Geocoding API
 def geocode_location(location_name):
-    api_key = "b1dace1373c6b5962f74725173816a3e"  # Replace with your API key
+    api_key = "b1dace1373c6b5962f74725173816a3e"  # API key
     url = f"http://api.openweathermap.org/geo/1.0/direct?q={location_name}&limit=1&appid={api_key}"
     
     response = requests.get(url)
