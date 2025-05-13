@@ -9,19 +9,12 @@ SafeWay is a web-based application designed to assist e-hailing drivers by optim
 
 ### Project Structure
 ├── app.py                # Main application file
-
 ├── crime_data.py          # Script to calculate crime severity and proximity
-
 ├── data_processing.py     # Preprocessing of crime data and normalization
-
 ├── visualize.py           # Functions to visualize the route on a map
-
 ├── templates/
-
   └── map.html           # HTML template for displaying the map
-
 ├── requirements.txt       # Required Python libraries
-
 ├── README.md         
 
 ### Technologies Used
@@ -35,21 +28,15 @@ SafeWay is a web-based application designed to assist e-hailing drivers by optim
 
 ### Requirements
 You can install all the required libraries by running:
-
-pip install -r requirements.txt
+``` pip install -r requirements.txt
 
 requirements.txt:
-
 Flask==2.0.1
-
 pandas==1.3.3
-
 scikit-learn==0.24.2
-
 geopy==2.2.0
-
 folium==0.12.1
-
+```
 ### Setup Instructions
 1. Clone the repository
 2. Navigate into the project directory
@@ -65,9 +52,9 @@ folium==0.12.1
 3. Route Visualization- The app uses visualize.py to map the safest route. This is displayed on an interactive map in the map.html template.
 
 ### Usage
-*Input, the user provides the start and end locations.
+* Input, the user provides the start and end locations.
 
-*Output, the app displays the safest route between the two points, factoring in crime data.
+* Output, the app displays the safest route between the two points, factoring in crime data.
 
 ### Future Improvements
 Integration with live traffic data.
