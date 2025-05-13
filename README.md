@@ -8,14 +8,14 @@ SafeWay is a web-based application designed to assist e-hailing drivers by optim
 - Visualization that generates and displays the route on an interactive map.
 
 ### Project Structure
-├── app.py                # Main application file
-├── crime_data.py          # Script to calculate crime severity and proximity
-├── data_processing.py     # Preprocessing of crime data and normalization
-├── visualize.py           # Functions to visualize the route on a map
-├── templates/
-  └── map.html           # HTML template for displaying the map
-├── requirements.txt       # Required Python libraries
-├── README.md         
+├── app.py                # Main application file     
+├── crime_data.py          # Script to calculate crime severity and proximity           
+├── data_processing.py     # Preprocessing of crime data and normalization               
+├── visualize.py           # Functions to visualize the route on a map                 
+├── templates/                     
+  └── map.html           # HTML template for displaying the map                  
+├── requirements.txt       # Required Python libraries            
+├── README.md                       
 
 ### Technologies Used
 + Python: Backend language.
